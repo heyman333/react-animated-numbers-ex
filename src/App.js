@@ -28,7 +28,8 @@ function App() {
           fontStyle={{ fontSize: 70 }}
           animateToNumber={animateTonNumber}
           animationType={animationType}
-          config={configs[currentConfig]}
+          // config={configs[currentConfig]}
+          config={{duration: 1300}}
           includeComma
         />
         <Divider type="horizontal" />
