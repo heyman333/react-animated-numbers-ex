@@ -1,6 +1,6 @@
 import "./App.css"
 import AnimatedNumber from "react-animated-numbers"
-import { Button, Divider } from "antd"
+import { Button, Divider, Input } from "antd"
 import { useState, useEffect } from "react"
 
 const configs = {
@@ -16,20 +16,20 @@ function App() {
   const [animateTonNumber, setAnimateToNumber] = useState(4023)
   const [animationType, setAnimationType] = useState("calm")
   const [currentConfig, setCurrentConfig] = useState("default")
+  const [duration, setDuration] = useState()
 
   useEffect(() => {
     setAnimateToNumber(4023)
   }, [animationType])
 
   return (
-    <div className="App">
+    <div className="App" style={{paddingBottom: 100}}>
       <section className="header">
         <AnimatedNumber
           fontStyle={{ fontSize: 70 }}
           animateToNumber={animateTonNumber}
           animationType={animationType}
-          // config={configs[currentConfig]}
-          config={{duration: 1300}}
+          config={duration? { duration } : configs[currentConfig]}
           includeComma
         />
         <Divider type="horizontal" />
@@ -112,6 +112,8 @@ function App() {
             molasses
           </Button>
         </div>
+        <span>Enter Dutation</span>
+        <Input id="number" type="number" placeholder="duration" onChange={(e) => setDuration(Number(e.target.value))}/>
       </section>
     </div>
   )
