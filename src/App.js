@@ -31,6 +31,8 @@ function App() {
           animationType={animationType}
           config={duration? { duration } : configs[currentConfig]}
           includeComma
+          onFinish={() => console.log("!!")}
+          onStart={() => console.log("onStart!")}
         />
         <Divider type="horizontal" />
         <div>
@@ -55,7 +57,7 @@ function App() {
         </Button>
         <Divider type="horizontal" />
 
-        <span>change animation type</span>
+        <h2>change animation type</h2>
         <Button
           title="change to random"
           onClick={() => setAnimationType("random")}
@@ -68,7 +70,7 @@ function App() {
 
         <Divider type="horizontal" />
         <div className="config">
-          <span>spring config</span>
+          <h2>spring config</h2>
           <Button
             title="default"
             onClick={() => setCurrentConfig("default")}
@@ -112,7 +114,8 @@ function App() {
             molasses
           </Button>
         </div>
-        <span>Enter Dutation</span>
+        <h2>Enter Dutation</h2>
+        <h4>(If a number is entered, the config is ignored)</h4>
         <Input id="number" type="number" placeholder="duration" onChange={(e) => setDuration(Number(e.target.value))}/>
       </section>
     </div>

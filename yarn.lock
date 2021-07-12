@@ -9395,10 +9395,10 @@ rc-virtual-list@^3.0.1, rc-virtual-list@^3.2.0:
     rc-resize-observer "^1.0.0"
     rc-util "^5.0.7"
 
-react-animated-numbers@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/react-animated-numbers/-/react-animated-numbers-0.4.2.tgz#862dcdbf6c15215895339cd372d65a3c3f8216c8"
-  integrity sha512-8/OgxvaKSdcfwnSBR8E3RJ4kp7+d06VCnsZGmrjN+c03iVfIXAXvy9nlFVIagas2cRVSMWwX9YILE58XQjN46w==
+react-animated-numbers@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/react-animated-numbers/-/react-animated-numbers-0.4.3.tgz#f489ad1b19d766f4d6154dbb4c9313b64500b9a2"
+  integrity sha512-S1N7SVp79Z+ihuNK/YcScjrkaZ0pbbcLiEhFgabI/eeM8MPJdpbylfbDGa64+5lIYxFdVDqZoaOcN/EsEETnAw==
   dependencies:
     react-spring "^8.0.27"
 
