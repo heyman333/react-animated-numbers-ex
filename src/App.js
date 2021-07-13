@@ -1,6 +1,6 @@
 import "./App.css"
 import AnimatedNumber from "react-animated-numbers"
-import { Button, Divider, Input } from "antd"
+import { Button, Divider } from "antd"
 import { useState, useEffect } from "react"
 
 const configs = {
@@ -16,7 +16,6 @@ function App() {
   const [animateTonNumber, setAnimateToNumber] = useState(4023)
   const [animationType, setAnimationType] = useState("calm")
   const [currentConfig, setCurrentConfig] = useState("default")
-  const [duration, setDuration] = useState()
 
   useEffect(() => {
     setAnimateToNumber(4023)
@@ -29,7 +28,7 @@ function App() {
           fontStyle={{ fontSize: 70 }}
           animateToNumber={animateTonNumber}
           animationType={animationType}
-          config={duration? { duration } : configs[currentConfig]}
+          config={configs[currentConfig]}
           includeComma
           onFinish={() => console.log("!!")}
           onStart={() => console.log("onStart!")}
@@ -114,9 +113,6 @@ function App() {
             molasses
           </Button>
         </div>
-        <h2>Enter Dutation</h2>
-        <h4>(If a number is entered, the config is ignored)</h4>
-        <Input id="number" type="number" placeholder="duration" onChange={(e) => setDuration(Number(e.target.value))}/>
       </section>
     </div>
   )
